@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/ICO">
+        <file>ICO/about_3697.ico</file>
+        <file>ICO/about_faq_support_info_help_icon_251872.ico</file>
+        <file>ICO/audiowave_audio_4642.ico</file>
+        <file>ICO/Wave-signal-1_icon-icons.com_51836.ico</file>
+        <file>ICO/wave_square_sound_e_icon_232872.ico</file>
+    </qresource>
+</RCC>
