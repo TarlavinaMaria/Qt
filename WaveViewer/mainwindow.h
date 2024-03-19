@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <aboutdialog.h>
 #include <plot.h>
+#include <QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

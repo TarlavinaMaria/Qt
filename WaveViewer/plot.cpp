@@ -6,16 +6,25 @@ Plot::Plot(QWidget *parent) :
     ui(new Ui::Plot)
 {
     ui->setupUi(this);
-    setCentralWidget(ui->customPlot);
+
+
+//    setCentralWidget(ui->customPlot);
     ui->customPlot->addGraph();
     ui->customPlot->xAxis->setRange(0, 4500);
     ui->customPlot->yAxis->setRange(-500, 4500);
-    ui->customPlot->replot();
+
 
 }
 
 Plot::~Plot()
 {
     delete ui;
+}
+
+void Plot::resizeEvent(QResizeEvent *event)
+{
+    QSize newSize = event->size();
+    ui->customPlot->resize(newSize.width(), newSize.height()/1.5);
+    QWidget::resizeEvent(event);
 }
 

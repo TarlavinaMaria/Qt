@@ -2,6 +2,7 @@
 #define PLOT_H
 
 #include <QMainWindow>
+#include <QVBoxLayout>
 
 namespace Ui {
 class Plot;
@@ -17,6 +18,7 @@ public:
 
 private:
     Ui::Plot *ui;
+    void resizeEvent(QResizeEvent *event) override;
 };
 
 #endif // PLOT_H
