@@ -31,16 +31,19 @@ public:
     {
         if (Plot->objectName().isEmpty())
             Plot->setObjectName(QString::fromUtf8("Plot"));
-        Plot->resize(800, 600);
+        Plot->resize(711, 382);
         centralwidget = new QWidget(Plot);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         customPlot = new QCustomPlot(centralwidget);
         customPlot->setObjectName(QString::fromUtf8("customPlot"));
-        customPlot->setGeometry(QRect(10, 10, 771, 551));
+        customPlot->setGeometry(QRect(0, 0, 701, 331));
+        customPlot->setMouseTracking(false);
+        customPlot->setTabletTracking(false);
+        customPlot->setAutoFillBackground(false);
         Plot->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Plot);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 20));
+        menubar->setGeometry(QRect(0, 0, 711, 20));
         Plot->setMenuBar(menubar);
         statusbar = new QStatusBar(Plot);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

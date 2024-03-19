@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "plot.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -9,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->actionAbout, &QAction::triggered, this, &MainWindow::about);
     connect(ui->actionWave_viewer, &QAction::triggered, this, &MainWindow::ShowGraph);
+
 }
 
 MainWindow::~MainWindow()
@@ -29,4 +32,6 @@ void MainWindow::ShowGraph()
     plot->setWindowModality(Qt::WindowModality::ApplicationModal);
     plot->show();
 }
+
+
 

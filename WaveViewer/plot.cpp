@@ -6,11 +6,11 @@ Plot::Plot(QWidget *parent) :
     ui(new Ui::Plot)
 {
     ui->setupUi(this);
-
+    setCentralWidget(ui->customPlot);
     ui->customPlot->addGraph();
     ui->customPlot->xAxis->setRange(0, 4500);
     ui->customPlot->yAxis->setRange(-500, 4500);
-    ui->customPlot->setInteraction(QCP::iRangeDrag, true);
+    ui->customPlot->replot();
 
 }
 
@@ -18,3 +18,4 @@ Plot::~Plot()
 {
     delete ui;
 }
+

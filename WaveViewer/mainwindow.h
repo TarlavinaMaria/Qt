@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include<aboutdialog.h>
-#include<plot.h>
+#include <aboutdialog.h>
+#include <plot.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,6 +20,7 @@ public:
 private slots:
     void about();
     void ShowGraph();
+
 
 private:
     Ui::MainWindow *ui;
