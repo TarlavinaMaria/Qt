@@ -264,6 +264,7 @@ Makefile: ..\WaveViewer\WaveViewer.pro C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\mkspe
 		C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\lib\Qt5PrintSupport.prl \
 		C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\lib\Qt5Widgets.prl \
 		C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\lib\Qt5Gui.prl \
+		C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\lib\Qt5Network.prl \
 		C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\lib\Qt5Core.prl \
 		C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\lib\qtmain.prl
 	$(QMAKE) -o Makefile ..\WaveViewer\WaveViewer.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -454,6 +455,7 @@ C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\mkspecs\features\lex.prf:
 C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\lib\Qt5PrintSupport.prl:
 C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\lib\Qt5Widgets.prl:
 C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\lib\Qt5Gui.prl:
+C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\lib\Qt5Network.prl:
 C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\lib\Qt5Core.prl:
 C:\Qt\Qt5.12.12\5.12.12\msvc2015_64\lib\qtmain.prl:
 qmake: FORCE

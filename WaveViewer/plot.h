@@ -2,7 +2,8 @@
 #define PLOT_H
 
 #include <QMainWindow>
-#include <QVBoxLayout>
+#include<QUdpSocket>
+#include<QNetworkDatagram>
 
 namespace Ui {
 class Plot;
@@ -15,10 +16,13 @@ class Plot : public QMainWindow
 public:
     explicit Plot(QWidget *parent = nullptr);
     ~Plot();
+    void resizeEvent(QResizeEvent* e);
 
+public slots:
+    void loadDataToPlot();
 private:
     Ui::Plot *ui;
-    void resizeEvent(QResizeEvent *event) override;
+    QUdpSocket *socket;
 };
 
 #endif // PLOT_H

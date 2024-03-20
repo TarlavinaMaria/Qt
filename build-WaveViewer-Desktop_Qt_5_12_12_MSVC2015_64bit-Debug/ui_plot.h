@@ -11,10 +11,8 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QScrollBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 #include "qcustomplot.h"
@@ -26,8 +24,6 @@ class Ui_Plot
 public:
     QWidget *centralwidget;
     QCustomPlot *customPlot;
-    QScrollBar *horizontalScrollBar;
-    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -35,22 +31,16 @@ public:
     {
         if (Plot->objectName().isEmpty())
             Plot->setObjectName(QString::fromUtf8("Plot"));
-        Plot->resize(711, 460);
+        Plot->resize(711, 415);
         centralwidget = new QWidget(Plot);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         customPlot = new QCustomPlot(centralwidget);
         customPlot->setObjectName(QString::fromUtf8("customPlot"));
-        customPlot->setGeometry(QRect(0, 0, 701, 331));
+        customPlot->setGeometry(QRect(9, 9, 693, 341));
+        customPlot->setSizeIncrement(QSize(0, 0));
         customPlot->setMouseTracking(false);
         customPlot->setTabletTracking(false);
         customPlot->setAutoFillBackground(false);
-        horizontalScrollBar = new QScrollBar(centralwidget);
-        horizontalScrollBar->setObjectName(QString::fromUtf8("horizontalScrollBar"));
-        horizontalScrollBar->setGeometry(QRect(30, 360, 160, 16));
-        horizontalScrollBar->setOrientation(Qt::Horizontal);
-        label = new QLabel(centralwidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(340, 360, 47, 13));
         Plot->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Plot);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -68,7 +58,6 @@ public:
     void retranslateUi(QMainWindow *Plot)
     {
         Plot->setWindowTitle(QApplication::translate("Plot", "MainWindow", nullptr));
-        label->setText(QApplication::translate("Plot", "TextLabel", nullptr));
     } // retranslateUi
 
 };
